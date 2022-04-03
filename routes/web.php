@@ -23,14 +23,15 @@ Route::get('/', function () {
         'wawa'
     ];
 
-    $test = Redis::connection();
-    Redis::pipeline(function ($pipe) use ($arr) {
-        //dd($arr);
-        for ($i = 0; $i < count($arr); $i++) {
-            $pipe->set('key:' . $i, $arr[$i]);
-        }
-    });
-    $phone = $test->command('get', ['key:2']);
+    //REDIS_TEST
+    //$test = Redis::connection();
+    //Redis::pipeline(function ($pipe) use ($arr) {
+    //    //dd($arr);
+    //    for ($i = 0; $i < count($arr); $i++) {
+    //        $pipe->set('key:' . $i, $arr[$i]);
+    //    }
+    //});
+    //$phone = $test->command('get', ['key:2']);
 
     //POSTGRESS_TEST
     $data = User::all();
@@ -40,5 +41,5 @@ Route::get('/', function () {
     //$redis = app()->make('redis');
     //$redis->set("key1", 'testValue');
 
-    return view('welcome', compact('nama', 'email', 'phone'));
+    return view('welcome', compact('nama', 'email'));
 });
