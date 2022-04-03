@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   -->
   <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <link rel="icon" type="image/x-icon" href="/img/abdulbadi.ico">
   <!--Replace with your tailwind.css once created-->
 
 </head>
